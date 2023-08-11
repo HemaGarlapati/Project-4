@@ -21,10 +21,10 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'hemagarlapati', variable: 'hemagarlapati')]) {
-                   sh 'docker login -u javatechie -p ${hemagarlapati}'
+                   sh 'docker login -u hemagarlapati -p ${hemagarlapati}'
 
 }
-                   sh 'docker push javatechie/devops-integration'
+                   sh 'docker push hemagarlapati/devops-integration'
                 }
             }
         }
